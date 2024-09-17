@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #090a09;
+        }
+        .approved {
+            color: #4CAF50;
+        }
+        .denied {
+            color: #f44336;
+        }
+        .result-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="icon" href="/static/assets/RapidLoans.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Application Result</h1>
+        <p>Thank you, {{ first_name }}. Your application has been processed.</p>
+        
+        {% if prediction == 1 %}
+            <p class="approved">{{ message }}</p>
+            <p>Monthly Installment: ${{ monthly_installment }}</p>
+            <img src="../static/assets/loan-approved.png" alt="Loan Approved" class="result-image">
+        {% endif %}
+        {% if prediction == 0 %}
+            <p class="denied">{{ message }}</p>
+            <img src="../static/assets/loan-denied.png" alt="Loan Denied" class="result-image">
+        {% endif %}
+
+        <a href="/" class="home-button">Go to Home Page</a>
+    </div>
+</body>
+</html>
