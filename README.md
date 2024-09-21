@@ -25,12 +25,9 @@ Keywords: machine learning, loan approval, credit score, predictive modeling, we
 
 
 ## Libraries Required:
-* numpy~=1.22.3
-* pandas~=1.4.1
-* matplotlib~=3.5.1
-* sklearn~=0.0
-* tensorflow~=2.8.0
-* keras~=2.8.0
-* opencv-python~=4.5.5.64
-* scikit-learn~=1.0.2
+* Flask==3.0.3
+* numpy==1.24.3
+* pandas==2.0.1
+* scikit-learn==1.2.2
+* xgboost==2.1.1
 
