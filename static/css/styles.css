@@ -222,18 +222,65 @@
     .col-sm-4 {
       text-align: center;
       margin: 25px 0;
-      
     }
     .btn {
       width: 100%;
       margin-bottom: 35px;
     }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-      font-size: 150px;
+    h1, h4 {
+      font-size: 18px;
     }
+    .navbar {
+      padding: 10px;
+    }
+    .jumbotron {
+      padding: 50px 20px;
+    }
+    .panel-body img {
+      width: 100%;
+      height: auto;
+    }
+    .panel {
+      margin-bottom: 30px;
+    }
+    .container-fluid {
+      padding: 30px 15px;
+    }
+    .panel-footer h3 {
+      font-size: 24px;
+    }
+    .navbar-collapse {
+      background-color: #2ccabd; 
+    }
+}
+  
+@media screen and (max-width: 480px) {
+  .jumbotron {
+    padding: 40px 10px;
+    background-position: center center;
+    height: auto;
   }
+  .jumbotron h1 {
+    font-size: 24px;
+  }
+  .jumbotron p {
+    font-size: 16px;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-control {
+    font-size: 16px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+  .navbar-collapse {
+    background-color: #2ccabd; 
+  }
+
+}
 
   /* Style for form labels */
 .form-label {
