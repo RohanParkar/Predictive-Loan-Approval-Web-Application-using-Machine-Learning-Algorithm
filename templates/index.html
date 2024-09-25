@@ -14,21 +14,31 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top scroll-navbar" id="navbar">
-  <div class="container ">
-    <div class="navbar-header">
-     <a class="navbar-brand" href="#myPage">RapidLoans.com</a>
+  <nav class="navbar navbar-default navbar-fixed-top scroll-navbar" id="navbar">
+    <div class="container">
+      <!-- Navbar header with brand and toggle button for mobile -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage">RapidLoans.com</a>
+      </div>
+  
+      <!-- Navbar links that will collapse on mobile screens -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#interestrate">Interest Rate</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#interestrate">Interest Rate</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+  
 
 <div class="jumbotron text-center">
   <h1>RapidLoans.com</h1> 
@@ -172,8 +182,10 @@
 
 <div id="contact" class="container-fluid bg-grey">
   <div class="form-container">
-  <h1 class="text-center">CONTACT</h1>
-      <div class="row"slideanim>
+    <h1 class="text-center">CONTACT</h1>
+    <!-- Form action points to Formspree endpoint -->
+    <form action="https://formspree.io/f/myzgqrpn" method="POST">
+      <div class="row slideanim">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
@@ -187,7 +199,8 @@
           <button class="btn btn-default pull-right" type="submit">Send</button>
         </div>
       </div>
-    </div>
+    </form>
+  </div>
 </div>
 
 
