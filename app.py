@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os
 import pickle
 import numpy as np
 import pandas as pd
@@ -70,7 +71,7 @@ def submit_application():
     
     input = pd.DataFrame(data, columns=columns)
     print("Original",input)
-    df = pd.read_csv("data\prosperLoanDataCleaned.csv")
+    df = pd.read_csv(os.path.join("data", "prosperLoanDataCleaned.csv"))
     df = df.drop(['LoanNumber'], axis=1)
 
     # Handling outliers 
